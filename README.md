@@ -1,8 +1,12 @@
-# React + Vite
+# React Portfolio
+[![Static Badge](https://img.shields.io/badge/License-MIT-blue)](./LICENSE)
+## Description
+This is a portfolio for Keith Claas.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## License
+This application is covered under the [MIT](./LICENSE) license
 
-Currently, two official plugins are available:
+## Questions
+Github: [kc-claas](https://github.com/kc-claas)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+For additional questions, contact keithclaas@hotmail.com
