@@ -1,11 +1,11 @@
-import Navbar from '../components/navbar'
+import Navigation from './navigation'
 
 function Header() {
     return (
         <>
             <h1>Keith Claas</h1>
             <nav>
-                <Navbar/>
+                <Navigation/>
             </nav>
         </>
         

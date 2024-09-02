@@ -1,0 +1,185 @@
+/* define color variables */
+
+:root {
+    --light: rgb(225, 231, 250);
+    --fade-light: #a0a4b8ff;
+    --fade-dark: #654f6fff;
+    --contrast: rgb(31, 26, 77);
+    --background: rgb(36, 109, 126);
+    --background-fade: rgb(20, 183, 219);
+}
+
+/* universal modifiers */
+* {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    color: var(--light);
+    transition: all .25s;
+}
+
+/* background image and spacing */
+html, body {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: radial-gradient(var(--background-fade), var(--background)) fixed;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+/* sticky footer*/
+.header, .footer {
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: var(--contrast);
+}
+
+.main {
+    flex-grow: 1;
+}
+
+
+/* header and navbar */
+
+header h1 {
+    padding: 25px;
+}
+
+nav {
+    margin-left: 10px;
+}
+
+nav ul li a {
+    border-radius: 20px 20px 0 0;
+}
+
+.nav-link a, .nav-item a:not(.active){
+    color: var(--background-fade)
+}
+
+.nav-link:focus, .nav-link:hover {
+    color:var(--light)
+}
+
+.active {
+    background-color: var(--background);
+    color: var(--light)
+}
+
+
+/* footer */
+
+.footer-link {
+    padding: 5px, 0
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    color:var(--light)
+}
+
+
+/* portfolio cards */
+.card {
+    min-height: 250px;
+    display:flex;
+    align-items: start;
+    justify-content:space-evenly
+}
+
+.card a {
+    color:var(--light);
+    text-decoration: none;
+    
+}
+
+.card a:hover {
+    color:var(--contrast);
+
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    border: var(--light) 0px solid;
+    border-radius: 100%;
+}
+
+.logo:hover {
+    background-image: linear-gradient(var(--light), var(--light));
+    box-shadow: var(--light) 0 0 10px 8px;
+
+}
+
+.weather {
+    background-image: linear-gradient(315deg, var(--fade-light) 0%, var(--fade-dark) 100%);
+    background-size: 100% 100%;
+
+}
+
+.readme {
+    background-image: linear-gradient(45deg, var(--fade-light) 0%, var(--fade-dark) 100%);
+    background-size: 100% 100%;
+
+}
+
+.recipe {
+    background-image: linear-gradient(270deg, var(--fade-light) 0%, var(--fade-dark) 100%);
+    background-size: 100% 100%;
+
+}
+
+.employee {
+    background-image: linear-gradient(90deg, var(--fade-light) 0%, var(--fade-dark) 100%);
+    background-size: 100% 100%;
+
+}
+
+.vehicle {
+    background-image: linear-gradient(225deg, var(--fade-light) 0%, var(--fade-dark) 100%);
+    background-size: 100% 100%;
+
+}
+
+.rps {
+    background-image: linear-gradient(135deg, var(--fade-light) 0%, var(--fade-dark) 100%);
+    background-size: 100% 100%;
+
+}
+
+
+/* form */
+
+
+.form-btn {
+    color: var(--contrast);
+    border-color: black;
+    border-width: 2px;
+    border-radius: 10px;
+    background-color: var(--fade-light);
+    width: 100px;
+    height: 50px;
+}
+
+.form-btn:hover, .form-btn:active {
+    color: var(--background-fade);
+    border-color: black;
+    border-width: 2px;
+    border-radius: 10px;
+    background-color: var(--fade-dark);
+}
+
+.form-completion {
+    color: rgb(146, 23, 23);
+    font-size: 24px;
+    font-weight: bolder;
+}

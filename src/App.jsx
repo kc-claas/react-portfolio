@@ -5,13 +5,13 @@ import Footer from '../components/footer'
 function App() {
   return (
     <>
-      <header>
+      <header className="header">
         <Header/>
       </header>
-      <main>
+      <main className="main container my-5">
         <Outlet/>
       </main>
-      <footer>
+      <footer className="footer position-relative bottom-0">
         <Footer/>
       </footer>
     </>
