@@ -93,7 +93,9 @@ footer a:hover {
     min-height: 250px;
     display:flex;
     align-items: start;
-    justify-content:space-evenly
+    justify-content:space-evenly;
+    border: black 2px solid;
+    box-shadow: black 5px 5px 15px 5px;
 }
 
 .card a {
@@ -160,26 +162,34 @@ footer a:hover {
 /* form */
 
 
-.form-btn {
-    color: var(--contrast);
-    border-color: black;
-    border-width: 2px;
-    border-radius: 10px;
-    background-color: var(--fade-light);
-    width: 100px;
-    height: 50px;
-}
-
-.form-btn:hover, .form-btn:active {
+.btn {
     color: var(--background-fade);
-    border-color: black;
-    border-width: 2px;
     border-radius: 10px;
     background-color: var(--fade-dark);
+    border: black 2px solid;
+    box-shadow: black 2px 2px;
+}
+
+.btn:hover {
+    color: var(--contrast);
+    background-color: var(--fade-dark);
+    border: black 2px solid;
+}
+
+.btn:active, :not(.btn-check)+.btn:active {
+    color: var(--contrast);
+    border: black 2px solid;
+    border-radius: 10px;
+    background-color: var(--fade-light);
 }
 
 .form-completion {
     color: rgb(146, 23, 23);
     font-size: 24px;
     font-weight: bolder;
+}
+
+.form-control, .form-control:focus {
+    border: black 2px solid;
+    box-shadow: 2px 2px;
 }

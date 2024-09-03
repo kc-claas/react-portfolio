@@ -65,7 +65,7 @@ function Contact() {
                 onChange={handleOnChange}
                 />
             </div>
-                <button className="form-btn" type="submit">Submit</button>                              
+                <button className="btn" type="submit">Submit</button>                              
             {(completion === false) ? (<p className="form-completion form-text">Please fill out all fields</p>) : (<></>)
             }
         </form>

@@ -13,6 +13,7 @@ function Resume() {
             </ul>
             <h2>Backend Proficiencies</h2>
             <ul>
+                <li>Node</li>
                 <li>APIs</li>
                 <li>Express</li>
                 <li>PostgreSQL</li>
