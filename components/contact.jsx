@@ -64,7 +64,7 @@ function Contact() {
             </div>
             <div className="mb-3">
                 <label className="form-label">Comments</label>
-                <textarea rows="4"
+                <textarea rows="3"
                 className="form-control"
                 value={comment} 
                 name="comments" 
