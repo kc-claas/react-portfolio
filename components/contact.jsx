@@ -29,12 +29,17 @@ function Contact() {
             else {return setComment(value)}
     }
 
+    function handleFocusOut(event) {
+        const {value} = event.target
+            if (value === '') {setCompletion(false)}
+            else {setCompletion(true)}
+    }
 
     return (
         <form className='form col-4' onSubmit={handleFormSubmit}>
             <h2>Contact</h2>
             <div className="mb-3">
-                <label className="form-label" for="name">Name</label>
+                <label className="form-label">Name</label>
                 <input
                 className="form-control"
                 value={name} 
@@ -42,10 +47,11 @@ function Contact() {
                 type="text" 
                 placeholder="name"
                 onChange={handleOnChange}
+                onBlur={handleFocusOut}
                 />   
             </div>
             <div className="mb-3">
-                <label className="form-label" for="email">Email</label>
+                <label className="form-label">Email</label>
                 <input
                 className="form-control"
                 value={email} 
@@ -53,16 +59,18 @@ function Contact() {
                 type="email" 
                 placeholder="email"
                 onChange={handleOnChange}
+                onBlur={handleFocusOut}
                 />
             </div>
             <div className="mb-3">
-                <label className="form-label" for="comments">Comments</label>
+                <label className="form-label">Comments</label>
                 <textarea rows="4"
                 className="form-control"
                 value={comment} 
                 name="comments" 
                 placeholder="comments"
                 onChange={handleOnChange}
+                onBlur={handleFocusOut}
                 />
             </div>
                 <button className="btn" type="submit">Submit</button>                              
