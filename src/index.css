@@ -165,7 +165,24 @@ nav ul li a {
     font-weight: bolder;
 }
 
+.confirm {
+    color: var(--contrast);
+    font-size: 24px;
+    font-weight: bolder;
+}
+
 .form-control, .form-control:focus {
     border: black 2px solid;
     box-shadow: 2px 2px;
+}
+
+/* resume */
+
+.resume-dl{
+    font-size: 115%;
+}
+
+.resume-dl a {
+    color: var(--contrast)
+
 }

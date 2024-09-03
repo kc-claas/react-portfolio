@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom"
 
 function Resume() {
     return (
         <>
+            <p className="resume-dl"><Link className='resume-dl' to='#'>Download</Link> my resume</p>
             <h2>Frontend Proficiencies</h2>
             <ul>
                 <li>HTML</li>

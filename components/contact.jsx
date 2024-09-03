@@ -5,12 +5,12 @@ function Contact() {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [comment, setComment] = useState('')
-    const [completion, setCompletion] = useState(true)
+    const [completion, setCompletion] = useState('')
 
     function handleFormSubmit(event) {
         event.preventDefault()
         if (name === '' || email === '' || comment === '') {
-            setCompletion(false)
+            setCompletion('incomplete')
             return
         }
 
@@ -18,7 +18,7 @@ function Contact() {
         setName('')
         setEmail('')
         setComment('')
-        setCompletion(true)
+        setCompletion('submitted')
         return
     }
 
@@ -30,9 +30,9 @@ function Contact() {
     }
 
     function handleFocusOut(event) {
-        const {value} = event.target
-            if (value === '') {setCompletion(false)}
-            else {setCompletion(true)}
+        const {value, name} = event.target
+            if (value === '') {setCompletion(name)}
+            else {setCompletion('')}
     }
 
     return (
@@ -74,7 +74,12 @@ function Contact() {
                 />
             </div>
                 <button className="btn" type="submit">Submit</button>                              
-            {(completion === false) ? (<p className="form-completion form-text">Please fill out all fields</p>) : (<></>)
+            {(completion === 'incomplete') ? (<p className="form-completion form-text">Please fill out all fields</p>) 
+            : (completion === 'name') ? (<p className="form-completion form-text">The name field is required</p>)
+            : (completion === 'email') ? (<p className="form-completion form-text">A valid email address is required</p>)
+            : (completion === 'comments') ? (<p className="form-completion form-text">Please leave your comments</p>)
+            : (completion === 'submitted') ? (<p className="form-completion form-text confirm">Thank you for your feedback!</p>)
+            : (<></>)
             }
         </form>
     )
